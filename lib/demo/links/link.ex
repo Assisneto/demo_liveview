@@ -11,7 +11,7 @@ defmodule Demo.Links.Link do
   end
 
   @doc false
-  def changeset(link, attrs) do
+  def changeset(link, attrs \\ %{}) do
     link
     |> cast(attrs, [:url, :user_id])
     |> validate_required([:url, :user_id])

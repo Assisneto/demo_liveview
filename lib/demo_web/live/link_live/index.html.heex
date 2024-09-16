@@ -5,5 +5,17 @@
     class="bg-black border border-black hover:bg-gray-700 text-white font-bold py-2 px-3 rounded-md">
     New link
   </.link>
-  <div :for={ link <- @links }><%= link.url %></div>
+</div>
+<div class="divide-y">
+
+  <div :for={ link <- @links } class="py-2">
+    <div>
+      <div class="font-bold">
+        <%= link.url %>
+      </div>
+      <div class="text-sm">
+        <%= link.inserted_at %>
+      </div>
+    </div>
+  </div>
 </div>
